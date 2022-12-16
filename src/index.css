@@ -57,10 +57,3 @@ body {
 .pointer {
   cursor: pointer;
 }
-.play-button {
-  width: 15px;
-  height: 15px;
-}
-.play-button-disabled {
-  opacity: 0.3;
-}
