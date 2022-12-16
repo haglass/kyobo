@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Outlet, useMatch } from "react-router-dom";
 
-const SongList = (props) => {
+const BookList = (props) => {
   // 경로의 패턴을 비교한다.
   const pathMatch = useMatch("/books/:id");
   let pathMatchId = -1;
@@ -42,4 +42,4 @@ const SongList = (props) => {
   );
 };
 
-export default SongList;
+export default BookList;
