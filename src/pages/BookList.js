@@ -2,7 +2,6 @@ import React from "react";
 import { Link, Outlet, useMatch } from "react-router-dom";
 
 const BookList = (props) => {
-
   const pathMatch = useMatch("/books/:id");
   let pathMatchId = -1;
   if (pathMatch) {
@@ -20,7 +19,13 @@ const BookList = (props) => {
         }
       >
         <Link to={`/books/${item.id}`} style={{ textDecoration: "none" }}>
-          {item.bdiTitle}({item.biDisPrice})
+          <div className="list-inner">
+            <img src={item.bdiImage} alt="book-img" />
+            <div className="list-txt">
+              <p>{item.bdiTitle}</p>
+              <p>{item.biDisPrice}원</p>
+            </div>
+          </div>
         </Link>
       </li>
     );
@@ -28,7 +33,7 @@ const BookList = (props) => {
   return (
     <div className="card card-body">
       <h2>BookList</h2>
-      <ul className="list-group">{list}</ul>
+      <ul className="list-group text-center ">{list}</ul>
       <Outlet />
     </div>
   );
