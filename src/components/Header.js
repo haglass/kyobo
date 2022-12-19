@@ -1,17 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="card bg-light">
       <div className="card-heding">
-        <h2 className="text-center m-3">Kyobo</h2>
+        <img className="h-img" src="img_logo_kyobo@2x.png" />
         <div className="row">
           <div className="col-12">
             {/* <link to="전환랄 URI" */}
-            <Link className="btn btn-success menu" to="/">Home</Link>
-            <Link className="btn btn-success menu" to="/members">Members</Link>
-            <Link className="btn btn-success menu" to="/songs">Books</Link>
+            <NavLink
+              className={({ isActive }) => {
+                return isActive ? "btn menu btn-primary" : "btn menu btn-success";
+              }}
+              to="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => {
+                return isActive ? "btn menu btn-primary" : "btn menu btn-success";
+              }}
+              to="/books"
+            >
+              Books
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => {
+                return isActive ? "btn menu btn-primary" : "btn menu btn-success";
+              }}
+              to="/members"
+            >
+              Members
+            </NavLink>
           </div>
         </div>
       </div>

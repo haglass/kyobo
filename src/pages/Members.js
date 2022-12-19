@@ -15,6 +15,7 @@ const Members = (props) => {
     return (
       // 반복문에서는  key 속성이 있어야하며, unique 값
       <div className="col-md-4" key={index}>
+
         <img
           src={item.photo}
           className="img-thumbnail"

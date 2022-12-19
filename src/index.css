@@ -11,8 +11,9 @@ body {
   margin-top: 20px;
 }
 .menu {
-  width: 25%;
-  border-radius: 0 !important;
+  width: 20%;
+  border-radius: 30px !important;
+  margin: 10px;
 }
 /* 모달을 위한 스타일 추가 */
 .modal {
@@ -41,15 +42,33 @@ body {
   display: block;
   margin: 5px 0 0 0;
 }
+.col-12 {
+  margin: 0 0 30px 0;
+}
 .box .heading {
   background: #33a17f;
   font-weight: 300;
   text-align: left;
   color: #fff;
+
   margin: 0px;
   padding: 10px 10px 10px 10px;
   min-width: 200px;
   max-width: 360px;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #081d58 !important;
+  hover-border-color: #081d58 !important;
+  border: #081d58 !important;
+  /* disabled-border-color: #081d58 !important; */
+}
+
+.h-img {
+  width: 200px;
+  margin: 30px 0 0 0;
 }
 .box .player {
   background: white;
@@ -57,10 +76,42 @@ body {
 .pointer {
   cursor: pointer;
 }
-.play-button {
-  width: 15px;
-  height: 15px;
+
+.h1 {
+  margin: 60px 0 0 0 !important;
+  
+  animation: slide 5.5s ;
+  color: #081d58;
+  font-weight: 900;
 }
-.play-button-disabled {
-  opacity: 0.3;
+.h2 {
+  margin: 10px 0 !important;
+  
+  animation: slide 6s ;
+  color: #33a17f;
+  font-weight: 700;
+}
+.p{
+  margin: 30px 0 0 0;
+  animation: slide 7s ;
+
+}
+
+.p-b {
+  margin: 10px 0 80px 0;
+  animation: slide 7.5s ;
+}
+span{
+  font-weight: 500;
+}
+
+@keyframes slide{
+	from {
+		transform: translate(-100px,-100px);
+    opacity: 0;
+	}
+	to {
+		transform: translate(0px, 0px);
+    opacity: 1;
+	}
 }

@@ -1,5 +1,5 @@
 const requests = {
-  fetchSong: "/book.json",
+  fetchBook: "/book.json",
   fetchMember: "/member.json",
   fetchBmember: "/bmembers.json",
 };
