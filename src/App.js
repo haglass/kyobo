@@ -45,6 +45,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Navigate to="/home" />} /> */}
           <Route path="/members" element={<Members members={members} />} />
           <Route path="/books" element={<BookList books={books} />}>
             <Route index element={<PlayerIndex />} />

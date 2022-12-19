@@ -6,9 +6,12 @@ const Home = () => {
 
   return (
     <div className="card card-body">
-      <h2>교보문고 미니 프로젝트</h2>
-      <p>Front-end: 하경미,이혜영,이효정</p>
-      <p>Back-end: 우현주,유지은,차경준,김성민,차대군</p>
+      <div className="body-txt">
+        <h1 className="h1">교보문고 </h1>
+        <h3 className="h2">미니 프로젝트</h3>
+        <p className="p"><span>Front-end:</span> 하경미,이혜영,이효정</p>
+        <p className="p-b"><span>Back-end:</span> 우현주,유지은,차경준,김성민,차대군</p>
+      </div>
     </div>
   );
 };

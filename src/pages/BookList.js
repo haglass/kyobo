@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Outlet, useMatch } from "react-router-dom";
 
 const BookList = (props) => {
+  console.log(props);
   // 경로의 패턴을 비교한다.
   const pathMatch = useMatch("/books/:id");
   let pathMatchId = -1;
