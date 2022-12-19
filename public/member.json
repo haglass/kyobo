@@ -1,8 +1,17 @@
 [
-  { "name": "Maggie Adams", "photo": "photos/Mag.png" },
-  { "name": "Sammie Purcell", "photo": "photos/Sam.png" },
-  { "name": "Tim Purcell", "photo": "photos/Tim.png" },
-  { "name": "Scott King", "photo": "photos/King.png" },
-  { "name": "Johnny Pike", "photo": "photos/JPike.jpg" },
-  { "name": "Toby Ruckert", "photo": "photos/Toby.jpg" }
+  {
+    "name": "하경미",
+    "photo": "photos/cute.jpg",
+    "mail": "haglass75@gmail.com"
+  },
+  {
+    "name": "이혜영",
+    "photo": "photos/catsmile.png",
+    "mail": "cocotree221@gmail.com"
+  },
+  {
+    "name": "이효정",
+    "photo": "photos/cryingcat.jpg",
+    "mail": "dhfldhs0707@gmail.com"
+  }
 ]
