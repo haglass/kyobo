@@ -37,8 +37,10 @@ const App = () => {
       <div className="container">
         <Header />
         <Routes>
+
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
+
           <Route path="/members" element={<Members members={members} />} />
           <Route path="/books" element={<BookList books={books} />}>
             <Route path=":id" element={<Show books={books} />} />

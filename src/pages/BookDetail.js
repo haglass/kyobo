@@ -31,7 +31,10 @@ const BookDetail = (props) => {
           View Youtube
         </a> */}
       </p>
-      <Link to="/books">Return Book List</Link>
+
+
+      <Link to="/books">Return Books List</Link>
+
     </div>
   );
 };
