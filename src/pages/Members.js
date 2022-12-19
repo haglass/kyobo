@@ -13,7 +13,6 @@ const Members = (props) => {
   const imgSize = { with: 90, height: 80 };
   const list = props.members.map((item, index) => {
     return (
-      // 반복문에서는  key 속성이 있어야하며, unique 값
       <div className="col-6 col-md-4 col-lg-3" key={index}>
         <img
           src={item.photo}
