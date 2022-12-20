@@ -18,7 +18,9 @@ const Home = () => {
         </p>
         {from !== "" ? <h4>state.from {from} </h4> : ""}
       </div>
+      <div className="card card-f"></div>
     </div>
+    
   );
 };
 

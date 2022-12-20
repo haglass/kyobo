@@ -8,10 +8,11 @@ body {
 }
 .container {
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 .menu {
   width: 20%;
+  line-height: 37px;
   border-radius: 30px !important;
   margin: 10px;
 }
@@ -27,6 +28,9 @@ body {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+}
+.card-body{
+  padding: 0 !important;
 }
 .box {
   background-color: white;
@@ -65,6 +69,10 @@ body {
   /* hover-border-color: #081d58 !important; */
   border: #081d58 !important;
   /* disabled-border-color: #081d58 !important; */
+}
+a{
+  color: #33a17f;
+  text-align: center;
 }
 
 .h-img {
@@ -117,6 +125,14 @@ span {
   }
 }
 
+.card-f {
+  display: inline-block;
+  width: 100%;
+  height:30px;
+  background: #081d58;
+  border-top-left-radius: 0px ;
+  border-top-right-radius: 0px ;
+  }
 /* book-list 정렬 */
 .list-inner {
   display: flex;
@@ -150,12 +166,36 @@ span {
   text-decoration: line-through;
 }
 
+/* show */
+.show{
+  padding: 20px !important;
+}
+p.title{
+  font-size: 15px;
+  color: #33a17f;
+  font-weight: bold;
+}
+.show-name{
+  display: flex;
+  padding: 20px 0 !important;
+  font-size: 11px;
+  color: #081d58;
+  font-weight: bold;
+}
+.show-img{
+  width: 250px;
+  filter: drop-shadow(2px 2px 2px rgb(104, 102, 102));
+}
 .book-info {
   width: 85%;
   margin: 0 auto;
-  background: #e6e6e6;
+  background: #fcf6f2;
   border-radius: 25px;
-  padding: 50px 50px;
+  padding: 20px 20px;
   white-space: pre-wrap;
   text-align: left;
+}
+.float-end{
+  /* filter: drop-shadow(1px 1px 1px rgb(148, 148, 148)); */
+  border-radius: 2px;
 }
