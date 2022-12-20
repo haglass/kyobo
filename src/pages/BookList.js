@@ -15,25 +15,28 @@ const BookList = (props) => {
   }
 
   const list = props.books.map((item) => {
-    console.log(item);
+    // console.log(item);
 
     return (
       <li
-        key={item.id}
+        key={item.biSeq}
         className={
           item.id === pathMatchId
             ? "list-group-item list-group-item-secondary"
             : "list-group-item"
         }
       >
-        <Link to={`/books/${item.id}`} style={{ textDecoration: "none" }}>
+        <Link to={`/books/${item.biSeq}`} style={{ textDecoration: "none" }}>
           <div className="list-inner">
-            <img src={item.bdiImage} alt="book-img" />
+            <img
+              src={`http://192.168.0.154:9999/image/${item.bimgUri}`}
+              alt="book-img"
+            />
             <div className="list-txt">
-              <p>{item.bdiTitle}</p>
+              <p>{item.biTitle}</p>
               <p>
-                <span className="discount">{item.biDiscount * 100}%</span>
-                <span className="disprice">{item.biDisPrice}원</span>
+                <span className="discount">{item.disCount}%</span>
+                <span className="disprice">{item.disCountPrice}원</span>
                 <span className="price">{item.biPrice}원</span>
               </p>
             </div>
@@ -44,7 +47,7 @@ const BookList = (props) => {
   });
   let [searchParams, setSearchParams] = useSearchParams();
   const [page, setPage] = useState(1);
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   useEffect(() => {
     const strPage = searchParams.get("page");
     setPage(parseInt(strPage !== null ? strPage : "1"));
