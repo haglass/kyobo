@@ -31,8 +31,8 @@ body {
 .box {
   background-color: white;
   margin: 100px auto;
-  max-width: 330px;
-  min-width: 100px;
+  max-width: 700px;
+  min-width: 200px;
   min-height: 250px;
   font: 12px "verdana";
   padding: 5px 5px 5px 5px;
@@ -54,14 +54,14 @@ body {
   margin: 0px;
   padding: 10px 10px 10px 10px;
   min-width: 200px;
-  max-width: 360px;
+  max-width: 700px;
 }
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
   background-color: #081d58 !important;
-  hover-border-color: #081d58 !important;
+  /* hover-border-color: #081d58 !important; */
   border: #081d58 !important;
   /* disabled-border-color: #081d58 !important; */
 }
@@ -70,7 +70,7 @@ body {
   width: 200px;
   margin: 30px 0 0 0;
 }
-.box .player {
+.box .show {
   background: white;
 }
 .pointer {
@@ -129,4 +129,11 @@ span {
   text-align: left;
   text-decoration: none;
   color: #000;
+}
+.book-info {
+  width: 90%;
+  margin: 0 auto;
+  background: #e6e6e6;
+  border-radius: 25px;
+  padding: 40px 20px;
 }

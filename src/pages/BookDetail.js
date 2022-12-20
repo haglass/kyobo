@@ -7,7 +7,7 @@ const BookDetail = (props) => {
 
   const [bdiTitle, setBdiTitle] = useState("");
   const [bdiWriter, setBdiWriter] = useState("");
-  const [link, setLink] = useState("");
+  const [bdiImage, setBdiImage] = useState("");
 
   useEffect(() => {
     const result = props.books.find((item) => {
@@ -16,25 +16,21 @@ const BookDetail = (props) => {
     if (result) {
       setBdiTitle(result.bdiTitle ? result.bdiTitle : "No Title");
       setBdiWriter(result.bdiWriter ? result.bdiWriter : "No Writer");
-      setLink();
+      setBdiImage(result.bdiImage ? result.bdiImage : "No Image");
     } else {
       navigate("/books");
     }
-  });
+  }, []);
 
   return (
     <div className="mt-5">
       <h2>{bdiTitle}</h2>
       <p>Original Writer : {bdiWriter} </p>
       <p>
-        {/* <a href={link} target="_blank">
-          View Youtube
-        </a> */}
+        <img src={bdiImage} alt=""></img>
       </p>
 
-
       <Link to="/books">Return Books List</Link>
-
     </div>
   );
 };
