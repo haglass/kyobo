@@ -27,7 +27,7 @@ const BookDetail = (props) => {
       <h2>{bdiTitle}</h2>
       <p>Original Writer : {bdiWriter} </p>
       <p>
-        <img src={bdiImage} alt=""></img>
+        <img src={bdiImage} alt="book_img"></img>
       </p>
 
       <Link to="/books">Return Books List</Link>
