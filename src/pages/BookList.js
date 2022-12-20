@@ -1,5 +1,11 @@
-import React from "react";
-import { Link, Outlet, useMatch } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import {
+  Link,
+  Outlet,
+  useMatch,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 
 const BookList = (props) => {
   const pathMatch = useMatch("/books/:id");
@@ -10,6 +16,7 @@ const BookList = (props) => {
 
   const list = props.books.map((item) => {
     console.log(item);
+
     return (
       <li
         key={item.id}
@@ -35,10 +42,34 @@ const BookList = (props) => {
       </li>
     );
   });
+  let [searchParams, setSearchParams] = useSearchParams();
+  const [page, setPage] = useState(1);
+  const navigate = useNavigate;
+  useEffect(() => {
+    const strPage = searchParams.get("page");
+    setPage(parseInt(strPage !== null ? strPage : "1"));
+  }, [searchParams]);
+  const goPrev = () => {
+    if (page > 1) {
+      navigate(window.location.pathname + "?page=" + (page - 1));
+    }
+  };
+  const goNext = () => {
+    navigate(window.location.pathname + "?page=" + (page + 1));
+  };
   return (
     <div className="card card-body">
       <h2>BookList</h2>
       <ul className="list-group text-center ">{list}</ul>
+      <div>
+        <div className="m-2">현재 페이지 : {page}</div>
+        <button className="btn btn-secondary m-1" onClick={goPrev}>
+          Prev
+        </button>
+        <button className="btn btn-secondary m-1" onClick={goNext}>
+          Next
+        </button>
+      </div>
       <Outlet />
     </div>
   );

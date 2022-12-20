@@ -41,7 +41,8 @@ const Show = (props) => {
         <div className="show">
           <div>
             <p className="title">{bdiSubTitle}</p>
-            <img src="http://localhost:3000/photos/Image1.jpg" alt="book_img" />
+            {/* <img src="http://localhost:3000/photos/Image1.jpg" alt="book_img" /> */}
+            <img src={bdiImage} alt="book_img" />
             <p>{bdiWriter}</p>
             <p>{bdiPublisher}</p>
             <p>{bdiRegDt}</p>
