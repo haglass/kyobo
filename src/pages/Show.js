@@ -33,7 +33,7 @@ const Show = (props) => {
       <div className="box">
         <div className="heading">
           <Link to="/books" className="menu">
-            <span className="float-start badge bg-secondary pointer">X</span>
+            <span className="float-end badge bg-secondary pointer">X</span>
           </Link>
           <span className="title">{bdiTitle}</span>
           <br />
@@ -41,7 +41,7 @@ const Show = (props) => {
         <div className="show">
           <div>
             <p className="title">{bdiSubTitle}</p>
-            <img src={bdiImage} alt="book_img" />
+            <img src="http://localhost:3000/photos/Image1.jpg" alt="book_img" />
             <p>{bdiWriter}</p>
             <p>{bdiPublisher}</p>
             <p>{bdiRegDt}</p>

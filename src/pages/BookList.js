@@ -9,6 +9,7 @@ const BookList = (props) => {
   }
 
   const list = props.books.map((item) => {
+    console.log(item);
     return (
       <li
         key={item.id}
@@ -23,7 +24,11 @@ const BookList = (props) => {
             <img src={item.bdiImage} alt="book-img" />
             <div className="list-txt">
               <p>{item.bdiTitle}</p>
-              <p>{item.biDisPrice}원</p>
+              <p>
+                <span className="discount">{item.biDiscount}%</span>
+                <span className="disprice">{item.biDisPrice}원</span>
+                <span className="price">{item.biPrice}원</span>
+              </p>
             </div>
           </div>
         </Link>

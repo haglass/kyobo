@@ -31,7 +31,7 @@ body {
 .box {
   background-color: white;
   margin: 100px auto;
-  max-width: 700px;
+  max-width: 600px;
   min-width: 200px;
   min-height: 250px;
   font: 12px "verdana";
@@ -46,15 +46,16 @@ body {
   margin: 0 0 30px 0;
 }
 .box .heading {
-  background: #33a17f;
+  background: #081d58;
   font-weight: 300;
   text-align: left;
   color: #fff;
-
+  font-size: 1rem;
   margin: 0px;
   padding: 10px 10px 10px 10px;
   min-width: 200px;
-  max-width: 700px;
+  max-width: 600px;
+  white-space: pre-wrap;
 }
 .btn-primary,
 .btn-primary:hover,
@@ -72,6 +73,7 @@ body {
 }
 .box .show {
   background: white;
+  padding: 50px 0;
 }
 .pointer {
   cursor: pointer;
@@ -130,10 +132,30 @@ span {
   text-decoration: none;
   color: #000;
 }
+.list-txt > P:first-child {
+  font-size: 1.1rem;
+  word-break: keep-all;
+}
+.list-txt > p > span {
+  margin-right: 15px;
+}
+.discount {
+  color: red;
+}
+.disprice {
+  font-weight: bold;
+}
+.price {
+  color: #929292;
+  text-decoration: line-through;
+}
+
 .book-info {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   background: #e6e6e6;
   border-radius: 25px;
-  padding: 40px 20px;
+  padding: 50px 50px;
+  white-space: pre-wrap;
+  text-align: left;
 }
