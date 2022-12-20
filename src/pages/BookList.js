@@ -32,7 +32,7 @@ const BookList = (props) => {
             <div className="list-txt">
               <p>{item.bdiTitle}</p>
               <p>
-                <span className="discount">{item.biDiscount}%</span>
+                <span className="discount">{item.biDiscount * 100}%</span>
                 <span className="disprice">{item.biDisPrice}원</span>
                 <span className="price">{item.biPrice}원</span>
               </p>
@@ -63,10 +63,10 @@ const BookList = (props) => {
       <ul className="list-group text-center ">{list}</ul>
       <div>
         <div className="m-2">현재 페이지 : {page}</div>
-        <button className="btn btn-secondary m-1" onClick={goPrev}>
+        <button className="btn btn-success m-2" onClick={goPrev}>
           Prev
         </button>
-        <button className="btn btn-secondary m-1" onClick={goNext}>
+        <button className="btn btn-success m-2" onClick={goNext}>
           Next
         </button>
       </div>
