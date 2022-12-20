@@ -1,9 +1,6 @@
 import axios from "axios";
 const instance = axios.create({
-  baseURL: "http://localhost:3000",
-  params: {
-    api_key: 4564564,
-    a: "hello",
-  },
+  baseURL: "http://192.168.0.154:9999",
+  params: {},
 });
 export default instance;

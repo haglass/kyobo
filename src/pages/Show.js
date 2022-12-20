@@ -5,22 +5,25 @@ import { Link } from "react-router-dom";
 const Show = (props) => {
   const params = useParams();
   const navigate = useNavigate();
-  const [bdiTitle, setBdiTitle] = useState("");
+  const [biTitle, setBiTitle] = useState("");
   const [bdiSubTitle, setBdiSubTitle] = useState("");
   const [bdiImage, setBdiImage] = useState("");
-  const [bdiWriter, setBdiWriter] = useState("");
-  const [bdiPublisher, setBdiPublisher] = useState("");
+  const [bimgUri, setBimgUri] = useState("");
+  const [bwName, setBwName] = useState("");
+  const [bpName, setBpName] = useState("");
   const [bdiRegDt, setBdiRegDt] = useState("");
   const [bdiShow, setBdiShow] = useState("");
   useEffect(() => {
     const id = params.id ? parseInt(params.id, 10) : 0;
-    const book = props.books.find((item) => item.id === id);
+    const book = props.books.find((item) => item.biSeq === id);
     if (book) {
-      setBdiTitle(book.bdiTitle ? book.bdiTitle : "No Title");
-      setBdiSubTitle(book.bdiSubTitle ? book.bdiSubTitle : "No Title");
-      setBdiImage(book.bdiImage ? book.bdiImage : "No Image");
-      setBdiWriter(book.bdiWriter ? book.bdiWriter : "No Writer");
-      setBdiPublisher(book.bdiPublisher ? book.bdiPublisher : "No Publisher");
+      console.log(book);
+      setBimgUri(book.bimgUri ? book.bimgUri : "No Image");
+      setBiTitle(book.biTitle ? book.biTitle : "No Title");
+      setBdiSubTitle(book.biSubTitle ? book.biSubTitle : "No Title");
+      setBdiImage(book.biImage ? book.biImage : "No Image");
+      setBwName(book.bwName ? book.bwName : "No Writer");
+      setBpName(book.bpName ? book.bpName : "No Publisher");
       setBdiRegDt(book.bdiRegDt ? book.bdiRegDt : "No Date");
       setBdiShow(book.bdiShow ? book.bdiShow : "No Infomation");
     } else {
@@ -35,18 +38,22 @@ const Show = (props) => {
           <Link to="/books" className="menu">
             <span className="float-end badge rounded-pill bg-success">X</span>
           </Link>
-          <span className="title">{bdiTitle}</span>
+          <span className="title">{biTitle}</span>
           <br />
         </div>
         <div className="show">
           <div>
             <p className="title">{bdiSubTitle}</p>
-
-            {/* <img src="http://localhost:3000/photos/Image1.jpg" alt="book_img" /> */}
-            <img className="show-img" src={bdiImage} alt="book_img" />
-            <div className="show-name">{bdiWriter}/
-            {bdiPublisher}/
-            {bdiRegDt}</div>
+            <img
+              className="show-img"
+              src={`http://192.168.0.154:9999/image/${bimgUri}`}
+              alt="book_img"
+            />
+            <div className="show-name">
+              {bwName}
+              <br />
+              {bpName}/{bdiRegDt}
+            </div>
 
             <p className="book-info">{bdiShow}</p>
           </div>
