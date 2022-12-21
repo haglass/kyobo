@@ -13,10 +13,8 @@ const BookList = (props) => {
   if (pathMatch) {
     pathMatchId = pathMatch.params.id ? parseInt(pathMatch.params.id, 10) : -1;
   }
-
   const list = props.books.map((item) => {
     // console.log(item);
-
     return (
       <li
         key={item.biSeq}
@@ -45,6 +43,7 @@ const BookList = (props) => {
       </li>
     );
   });
+
   let [searchParams, setSearchParams] = useSearchParams();
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
@@ -52,13 +51,18 @@ const BookList = (props) => {
     const strPage = searchParams.get("page");
     setPage(parseInt(strPage !== null ? strPage : "1"));
   }, [searchParams]);
+
   const goPrev = () => {
+    props.pageChangePrev();
     if (page > 1) {
       navigate(window.location.pathname + "?page=" + (page - 1));
     }
   };
   const goNext = () => {
-    navigate(window.location.pathname + "?page=" + (page + 1));
+    props.pageChangeNext();
+    if (page < 10) {
+      navigate(window.location.pathname + "?page=" + (page + 1));
+    }
   };
   return (
     <div className="card card-body">

@@ -61,6 +61,22 @@ const App = () => {
     },
   ]);
   const [books, setBooks] = useState([]);
+  const [page, setPage] = useState(0);
+
+  const pageChangeNext = () => {
+    console.log("다음");
+    if (page < 9) {
+      setPage(page + 1);
+    }
+  };
+
+  const pageChangePrev = () => {
+    console.log("이전");
+    if (page > 0) {
+      setPage(page - 1);
+    }
+  };
+
   const fetchData = async () => {
     // const resultMember = await instance.get(requests.fetchMember);
     // setMembers(resultMember.data);
@@ -72,15 +88,16 @@ const App = () => {
     // 책목록 가져오기
 
     const params = {
-      page: 0,
+      page: page,
     };
     const resultBook = await instance.get(requests.fetchBook, { params });
     setBooks(resultBook.data.list);
   };
 
   useEffect(() => {
+    console.log("페이지 전환", page);
     fetchData();
-  }, []);
+  }, [page]);
 
   return (
     <Router>
@@ -93,7 +110,16 @@ const App = () => {
             path="/members"
             element={<Members members={members} bmembers={bmembers} />}
           />
-          <Route path="/books" element={<BookList books={books} />}>
+          <Route
+            path="/books"
+            element={
+              <BookList
+                books={books}
+                pageChangePrev={pageChangePrev}
+                pageChangeNext={pageChangeNext}
+              />
+            }
+          >
             <Route path=":id" element={<Show books={books} />} />
           </Route>
         </Routes>
