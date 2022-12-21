@@ -19,44 +19,44 @@ const App = () => {
   const [members, setMembers] = useState([
     {
       name: "하경미",
-      photo: "photos/cute.jpg",
+      photo: "photos/kyeongmi.jpg",
       mail: "haglass75@gmail.com",
     },
     {
       name: "이혜영",
-      photo: "photos/catsmile.png",
+      photo: "photos/hy.jpg",
       mail: "cocotree221@gmail.com",
     },
     {
       name: "이효정",
-      photo: "photos/cryingcat.jpg",
+      photo: "photos/hj.jpg",
       mail: "dhfldhs0707@gmail.com",
     },
   ]);
   const [bmembers, setBmembers] = useState([
     {
       name: "우현주",
-      photo: "photos/tablecat.jpg",
+      photo: "photos/bimg/backhj.jpg",
       mail: "woohyeonju507@gmail.com",
     },
     {
       name: "차대군",
-      photo: "photos/tablecat.jpg",
+      photo: "photos/bimg/backdg.jpg",
       mail: "credit102@naver.com",
     },
     {
       name: "유지은",
-      photo: "photos/politecat.jpg",
+      photo: "photos/bimg/backje.jpg",
       mail: "yuje0002@gmail.com",
     },
     {
       name: "차경준",
-      photo: "photos/tablecat.jpg",
+      photo: "photos/bimg/backkj.jpg",
       mail: "rudwns0401@gmail.com",
     },
     {
       name: "김성민",
-      photo: "photos/tablecat.jpg",
+      photo: "photos/bimg/backsm.jpg",
       mail: "wpfktmwkddls123@gmail.com",
     },
   ]);
