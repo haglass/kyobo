@@ -69,7 +69,6 @@ const App = () => {
       setPage(page + 1);
     }
   };
-
   const pageChangePrev = () => {
     console.log("이전");
     if (page > 0) {
@@ -85,13 +84,15 @@ const App = () => {
     // const resultBmember = await instance.get(requests.fetchBmember);
     // setBmembers(resultBmember.data);
     // console.log(resultBmember);
-    // 책목록 가져오기
 
+    // 책목록 가져오기
     const params = {
       page: page,
     };
     const resultBook = await instance.get(requests.fetchBook, { params });
     setBooks(resultBook.data.list);
+
+
   };
 
   useEffect(() => {

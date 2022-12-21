@@ -10,6 +10,14 @@ body {
   text-align: center;
   padding: 20px 0;
 }
+.container > h3 {
+  text-align: left !important;
+  padding: 20px 0;
+}
+.container > h3 > .bi {
+  display: block;
+  width: 30px;
+}
 .menu {
   width: 20%;
   line-height: 37px;
@@ -66,9 +74,7 @@ body {
 .btn-primary:active,
 .btn-primary:visited {
   background-color: #081d58 !important;
-  /* hover-border-color: #081d58 !important; */
   border: #081d58 !important;
-  /* disabled-border-color: #081d58 !important; */
 }
 a {
   color: #33a17f;
@@ -111,6 +117,10 @@ a {
 span {
   font-weight: 500;
 }
+.rudolf {
+  margin-bottom: 50px;
+  animation: rudolf infinite 2s ease;
+}
 
 @keyframes slide {
   from {
@@ -120,6 +130,17 @@ span {
   to {
     transform: translate(0px, 0px);
     opacity: 1;
+  }
+}
+@keyframes rudolf {
+  0% {
+    transform: translateY(0%) rotatez(30deg);
+  }
+  50% {
+    transform: translateY(0%) rotatez(-30deg);
+  }
+  100% {
+    transform: translateY(0%) rotatez(30deg);
   }
 }
 
@@ -197,4 +218,14 @@ p.title {
 .float-end {
   /* filter: drop-shadow(1px 1px 1px rgb(148, 148, 148)); */
   border-radius: 2px;
+}
+
+/* plug-in */
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(rgb(193, 199, 252), white);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px rgb(0, 0, 0));
 }

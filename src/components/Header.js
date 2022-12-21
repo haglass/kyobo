@@ -15,7 +15,7 @@ const Header = () => {
                   ? "btn menu btn-primary"
                   : "btn menu btn-success";
               }}
-              to="/"
+              to="/home"
             >
               Home
             </NavLink>
