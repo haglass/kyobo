@@ -15,6 +15,11 @@ const BookList = (props) => {
   }
   const list = props.books.map((item) => {
     // console.log(item);
+
+    // //가격 콤마 기능
+    // function priceToString(price) {
+    //   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    // }
     return (
       <li
         key={item.biSeq}
