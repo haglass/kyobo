@@ -13,3 +13,4 @@ React미니 프로젝트를 위한 연습
 Front-end: 하경미,이혜영,이효정
 Back-end: 우현주,유지은,차경준,김성민,차대군
 
+notion : (https://tourmaline-atlasaurus-77b.notion.site/Front-Backend-4-5b9f08f249aa4cb1b71dad45c8b29aae)
